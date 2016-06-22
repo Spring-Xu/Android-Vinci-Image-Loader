@@ -3,6 +3,7 @@ package com.vinci.imageloader.load;
 import com.vinci.imageloader.core.filecache.FileCache;
 import com.vinci.imageloader.core.memorycache.MemoryCache;
 import com.vinci.imageloader.core.thread.CustomExecutor;
+import com.vinci.imageloader.core.util.MLog;
 
 /**
  * Created by SpringXu on 15/9/3.
@@ -71,6 +72,15 @@ public class VinciOptions {
         this.defaultImageOptions = defaultImageOptions;
     }
 
+    /**
+     * Control the log tag. Default is false.
+     *
+     * @param isShowLog true is show, else do not show.
+     */
+    public void setShowLog(boolean isShowLog) {
+        MLog.DEBUG = isShowLog;
+    }
+
     public static class Builder {
         /**
          * This is file cache, it used for image file cache
@@ -112,6 +122,11 @@ public class VinciOptions {
 
         public Builder setDefaultImageOptions(ImageOptions defaultImageOptions) {
             this.defaultImageOptions = defaultImageOptions;
+            return this;
+        }
+
+        public Builder setShowLog(boolean isShowLog) {
+            MLog.DEBUG = isShowLog;
             return this;
         }
 

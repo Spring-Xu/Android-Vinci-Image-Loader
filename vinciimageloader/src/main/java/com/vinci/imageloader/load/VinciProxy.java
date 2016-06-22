@@ -22,6 +22,7 @@ import com.vinci.imageloader.core.view.HardVinciView;
  */
 final class VinciProxy {
     final String TAG = VinciProxy.class.getSimpleName();
+
     /**
      * vinci default config
      */

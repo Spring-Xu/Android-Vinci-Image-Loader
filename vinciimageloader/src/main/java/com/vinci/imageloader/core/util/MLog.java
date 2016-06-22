@@ -14,7 +14,7 @@ public class MLog {
 
     public static final String TAG = "VinciProxy";
 
-    private static final boolean DEBUG = true;
+    public static boolean DEBUG = false;
 
     public static void i(String tag, String msg) {
         if (TextUtils.isEmpty(msg)) {
