@@ -10,59 +10,47 @@ import android.util.Log;
  * @Email hquspring@gmail.com
  */
 public class MLog {
-
-
-    public static final String TAG = "VinciProxy";
+    private static final String TAG = "Vinci";
 
     public static boolean DEBUG = false;
 
     public static void i(String tag, String msg) {
-        if (TextUtils.isEmpty(msg)) {
+        if (DEBUG || TextUtils.isEmpty(msg)) {
             return;
         }
-        if (DEBUG) {
-            Log.i(tag, msg);
-        }
-
+        Log.i(tag, msg);
     }
 
     public static void d(String tag, String msg) {
-        if (TextUtils.isEmpty(msg)) {
+        if (DEBUG || TextUtils.isEmpty(msg)) {
             return;
         }
-        if (DEBUG) {
-            Log.d(tag, msg);
-        }
+        Log.d(tag, msg);
     }
 
     public static void e(String tag, String msg) {
-        if (TextUtils.isEmpty(msg)) {
+        if (DEBUG || TextUtils.isEmpty(msg)) {
             return;
         }
-
         Log.e(tag, msg);
     }
 
     public static void i(String msg) {
-        if (TextUtils.isEmpty(msg)) {
+        if (DEBUG || TextUtils.isEmpty(msg)) {
             return;
         }
-        if (DEBUG) {
-            Log.i(TAG, msg);
-        }
+        Log.i(TAG, msg);
     }
 
     public static void d(String msg) {
-        if (TextUtils.isEmpty(msg)) {
+        if (DEBUG || TextUtils.isEmpty(msg)) {
             return;
         }
-        if (DEBUG) {
-            Log.d(TAG, msg);
-        }
+        Log.d(TAG, msg);
     }
 
     public static void e(String msg) {
-        if (TextUtils.isEmpty(msg)) {
+        if (DEBUG || TextUtils.isEmpty(msg)) {
             return;
         }
         Log.e(TAG, msg);
